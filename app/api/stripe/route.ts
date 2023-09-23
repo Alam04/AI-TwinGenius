@@ -46,7 +46,7 @@ export async function GET() {
               name: "Companion Pro",
               description: "Create Custom AI Companions"
             },
-            unit_amount: 9999,
+            unit_amount: 999,
             recurring: {
               interval: "month"
             }
@@ -62,6 +62,6 @@ export async function GET() {
     return new NextResponse(JSON.stringify({ url: stripeSession.url }))
   } catch (error) {
     console.log("[STRIPE]", error);
-    return new NextResponse("Internal Error", { status: 500 });
-  }
+    return new NextResponse("Internal Error", { status: 500 });
+  }
 };
